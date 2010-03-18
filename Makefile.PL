@@ -22,6 +22,7 @@ author_tests 'xt';
 build_requires 'Test::More';
 build_requires 'Test::Exception';
 install_script 'rabbit_foot';
+install_share  'share/RabbitFoot';
 use_test_base;
 auto_install;
 WriteAll;

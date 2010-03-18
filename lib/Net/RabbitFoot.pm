@@ -39,7 +39,7 @@ sub load_xml_spec {
 
 sub default_amqp_spec {
     my $dir = File::ShareDir::module_dir(__PACKAGE__);
-    return "$dir/fixed_amqp0-8.xml";
+    return "$dir/spec/amqp0-8.xml";
 }
 
 sub open_channel {
