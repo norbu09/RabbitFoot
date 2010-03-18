@@ -469,9 +469,7 @@ AnyEvent::RabbitMQ - An asynchronous and multi channel Perl AMQP client.
 
   my $cv = AnyEvent->condvar;
 
-  my $ar = AnyEvent::RabbitMQ->new->load_xml_spec(
-      '/path/to/amqp0-8.xml',
-  )->connect(
+  my $ar = AnyEvent::RabbitMQ->new->load_xml_spec->connect(
       host       => 'localhosti',
       port       => 5672,
       user       => 'guest',
