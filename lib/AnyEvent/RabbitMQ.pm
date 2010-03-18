@@ -5,6 +5,7 @@ use warnings;
 
 use Data::Dumper;
 use List::MoreUtils qw(none);
+use File::ShareDir 'dist_file';
 
 use AnyEvent::Handle;
 use AnyEvent::Socket;
@@ -41,7 +42,7 @@ sub delete_channel {
 
 sub load_xml_spec {
     my $self = shift;
-    Net::AMQP::Protocol->load_xml_spec(@_); # die when fail in this line.
+    Net::AMQP::Protocol->load_xml_spec( shift || File::ShareDir::dist_file( 'Net-RabbitFoot', 'amqp0-8.xml' )); # die when fail in this line.
     return $self;
 }
 
